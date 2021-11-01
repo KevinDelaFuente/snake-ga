@@ -1,4 +1,5 @@
 import os
+os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
 import pygame
 import argparse
 import numpy as np
@@ -10,8 +11,8 @@ import random
 import statistics
 import torch.optim as optim
 import torch 
-from GPyOpt.methods import BayesianOptimization
-from bayesOpt import *
+#from GPyOpt.methods import BayesianOptimization
+#from bayesOpt import *
 import datetime
 import distutils.util
 DEVICE = 'cpu' # 'cuda' if torch.cuda.is_available() else 'cpu'
@@ -27,7 +28,7 @@ def define_parameters():
     params['first_layer_size'] = 200    # neurons in the first layer
     params['second_layer_size'] = 20   # neurons in the second layer
     params['third_layer_size'] = 50    # neurons in the third layer
-    params['episodes'] = 250          
+    params['episodes'] = 25          
     params['memory_size'] = 2500
     params['batch_size'] = 1000
     # Settings
