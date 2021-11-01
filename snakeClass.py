@@ -11,6 +11,7 @@ import random
 import statistics
 import torch.optim as optim
 import torch 
+import GPyOpt
 from GPyOpt.methods import BayesianOptimization
 from bayesOpt import *
 import datetime
